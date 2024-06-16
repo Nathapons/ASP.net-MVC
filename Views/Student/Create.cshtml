@@ -1,0 +1,19 @@
+@model Student;
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center">บันทึกคะแนนสอบ</h1>
+<form method="POST" asp-controller="Student" asp-action="create">
+    <div class="form-group mt-3">
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="Score"></label>
+        <input type="score" asp-for="Score" class="form-control" />
+        <span asp-validation-for="Score" class="text-danger"></span>
+    </div>
+    <input type="submit" class="btn btn-primary my-3" />
+</form>
